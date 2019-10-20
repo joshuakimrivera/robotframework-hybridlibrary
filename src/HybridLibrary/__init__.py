@@ -1,0 +1,36 @@
+# Robot Framework Hybrid Library main __init__.py file
+# Copyright (C) 2019  Joshua Kim Rivera
+
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+
+from robotlibcore import keyword, HybridCore
+
+__version__ = 0.1
+
+class HybridLibrary(HybridCore):
+    """Main Documentation
+    """
+
+    ROBOT_LIBRARY_SCOPE = 'GLOBAL'
+    ROBOT_LIBRARY_VERSION = __version__
+
+
+    def __init__(self,implicitWait=5000):
+        """
+        """
+        libraries = [
+        ]
+        HybridCore.__init__(self,libraries)
+        self.implicitWait = implicitWait
